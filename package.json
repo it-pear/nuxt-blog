@@ -12,12 +12,16 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.3",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
     "express": "^4.16.4",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.4.13",
     "nuxt": "^2.15.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "vue-markdown": "^2.2.4"
   },
   "devDependencies": {
