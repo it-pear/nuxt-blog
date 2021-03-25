@@ -6,7 +6,7 @@ const router = Router()
 router.post('/admin/login', login)
 
 // /api/auth/create
-router.post('/admin/login', createUser)
+router.post('/admin/create', createUser)
 
 module.exports = router
 
