@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose')
+const {Schema, model} = require('mongoose')
 
 const postSchema = new Schema({
   title: {
@@ -26,6 +26,4 @@ const postSchema = new Schema({
   ]
 })
 
-module.exports = model('post', postSchema)
-
-
+module.exports = model('posts', postSchema)
