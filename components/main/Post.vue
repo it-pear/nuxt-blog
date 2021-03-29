@@ -1,16 +1,16 @@
 <template>
   <el-card shadow="hover" :body-style="{padding:0}" class="post">
     <header slot="header" class="post-header">
-      <h3>Post title</h3>
+      <h3>{{post.title}}</h3>
 
       <small>
         <i class="el-icon-time"></i>
-        {{ new Date().toLocaleString() }}
+        {{ new Date(post.date).toLocaleString() }}
       </small>
     </header>
     <div class="post-body">
       <img
-        src="https://traveller-eu.ru/sites/default/files/styles/index/public/2017-08-29%2009.25.48%202-900x599.jpg"
+        :src="post.imageUrl"
         alt="post image"
         class="post-img">
     </div>
@@ -19,7 +19,7 @@
 
       <span>
         <i class="el-icon-message"></i>
-        12
+        {{post.comments.length}}
       </span>
     </footer>
   </el-card>
@@ -28,9 +28,15 @@
 
 <script>
 export default {
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
   methods: {
     openPost() {
-      const id = 'test-id'
+      const id = this.post._id
       this.$router.push(`/post/${id}`)
     }
   }
